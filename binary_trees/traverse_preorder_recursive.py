@@ -15,12 +15,13 @@ class Solution:
             self.helper(n.left,result)
             self.helper(n.right,result)
 
-#built a simple tree
-root = TreeNode(val=0)
-root.left = TreeNode(val=1)
-root.right = TreeNode(val=2)
-root.left.left = TreeNode(val=4)
-root.left.right = TreeNode(val=5)
+#Build a simple tree
+root = TreeNode(0)
+root.left = TreeNode(1)
+root.right = TreeNode(2)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
 
+#Do a preorder traversal
 s = Solution()
 print(s.preorder(root))
