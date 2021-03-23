@@ -5,15 +5,15 @@ class Solution:
         if root is None:
             return None
 
-        result = []
-        self.helper(root,result)
-        return result
+        self.result = []
+        self.helper(root)
+        return self.result
 
-    def helper(self,n,result):
+    def helper(self,n):
         if n:
-            result.append(n.val)
-            self.helper(n.left,result)
-            self.helper(n.right,result)
+            self.result.append(n.val)
+            self.helper(n.left)
+            self.helper(n.right)
 
 #Build a simple tree
 root = TreeNode(0)
