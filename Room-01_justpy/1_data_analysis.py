@@ -68,7 +68,6 @@ chart_def = """
             }
         }]
     }
-
 }
 """
 chart_def2 = """
@@ -128,10 +127,8 @@ chart_def2 = """
             }
         }]
     }
-
 }
 """
-
 
 def app():
     wp = jp.QuasarPage()
