@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -14,7 +15,8 @@ def contact_list(request):
         serializer = ContactSerializer(contacts, many=True)
         print('serializer.data :')
         print(serializer.data)
-        return Response(serializer.data)
+        data = [{"firstname": "Andrew", "lastname": "Reid"}, {"firstname": "Benny", "lastname": "Benassi"}]
+        return Response(data)
  
     elif request.method == 'POST':
         print(request.data)
